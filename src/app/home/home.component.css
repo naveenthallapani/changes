@@ -1,0 +1,21 @@
+th:nth-child(odd) {
+    background: red;
+  }
+  th:nth-child(even) {
+    background:green;
+  }
+
+  .style tr:first-child(3) {
+    background-color:yellow;
+  }
+  .style tr:last-child {
+    background-color:green;
+  }
+
+  .style1 tr:first-child {
+    background-color:black;
+  }
+
+  .style1 tr:last-child {
+    background-color:red;
+  }

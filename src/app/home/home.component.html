@@ -1,0 +1,61 @@
+ 
+
+       
+      <table style="width:80%" class="style">
+    <tr>
+      <th>Id</th>
+      <th>fullName</th>
+   
+      <th>age</th>
+      <th>email</th>
+      <th>password</th>
+      <th>delete</th>
+      <th>view</th>
+    </tr>
+    <tr *ngFor="let user of userlist.data">
+      <td>{{user.id}}</td>
+      <td>{{user.fname}}{{user.lname}}</td>
+        <td>{{user.age}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.password}}</td>
+     
+      <td><button class="button" type="submit" (click)="deleteuser(user.id)">delete</button>
+      </td>
+      <td><button class="button" type="submit" (click)="viewuser(user.id)">view</button>
+        </td>
+            
+     
+    </tr>
+  </table>
+
+  <code>**{{userdata | json}}</code><hr/> 
+            
+  <div *ngIf="userdata != null">
+      <table class="table table-striped" class="style1">
+          <tr>
+            <td><b>username:</b></td>
+            <td>{{userdata.data.fname | uppercase}}
+                  {{userdata.data.lname | uppercase}}
+            </td>
+        </tr>
+        <tr>
+          <td> Age </td>                 
+
+          <td>{{userdata.data.age}}</td>
+      </tr>
+      <tr>
+          <td><b>Email :</b></td>
+          <td>{{userdata.data.email}}</td>
+      </tr>
+      <tr>
+          <td><b>password :</b></td>
+          <td>{{userdata.data.password}}</td>
+      </tr>
+
+     </table>
+
+
+ 
+  
+
+
